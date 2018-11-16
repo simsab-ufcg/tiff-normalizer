@@ -60,7 +60,7 @@ void normalize(string inputFile, string outputFile){
             if (!isnan(line[j])) {
                 outline[j] = (line[j] - minValue) / (maxValue - minValue);
             } else {
-                outline[j] = -sqrt(-1.0);
+                outline[j] = line[j];
             }
         }
         TIFFWriteScanline(output, outline, i);
